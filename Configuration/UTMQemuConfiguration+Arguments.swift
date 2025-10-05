@@ -864,7 +864,7 @@ import Virtualization // for getting network interfaces
         "id=drive\(drive.id)"
         if let imageURL = drive.imageURL {
             "file.filename="
-            imageURL
+            imageURL.path.replacingOccurrences(of: ",", with: ",,")
         } else if !isCd {
             "file.filename="
             placeholderUrl
